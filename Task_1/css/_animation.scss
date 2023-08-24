@@ -1,0 +1,25 @@
+@mixin hide() {
+  opacity: 0;
+  filter: blur(1px);
+  transition: all 1.5s;
+}
+
+.hide {
+  @include hide();
+}
+
+.hideR {
+  transform: translateX(40%);
+  @include hide();
+}
+
+.hideL {
+  transform: translateX(-40%);
+  @include hide();
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
