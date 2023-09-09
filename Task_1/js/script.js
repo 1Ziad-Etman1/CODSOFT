@@ -49,3 +49,28 @@ window.onscroll = () => {
   menuIcon.classList.remove('bx-x')
   navbar.classList.remove('active')
 }
+
+//Contact us script
+
+let btn = document.getElementById('sbmt')
+btn.addEventListener('click', (e) => {
+  e.preventDefault()
+
+  // Email.send({
+  //   SecureToken: '7a53ec65-850e-4a26-9ae9-4387db86b9d8',
+  //   To: 'engziad90@gmail.com',
+  //   From: 'visitor1373@gmail.com',
+  //   Subject: document.getElementById('Email Subject').value,
+  //   Body: document.getElementById('Content').value,
+  // }).then((message) => alert(message))
+
+  Email.send({
+    Host: 'smtp.elasticemail.com',
+    Username: 'visitor1373@gmail.com',
+    Password: '3E2A6F12BA176BD2BEDAD6474DBF1621A202',
+    To: 'engziad90@gmail.com',
+    From: 'visitor1373@gmail.com',
+    Subject: 'This is the subject',
+    Body: 'And this is the body',
+  }).then((message) => alert(message))
+})

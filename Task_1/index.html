@@ -74,9 +74,9 @@
             eius minima facilis.
           </p>
           <div class="btn-box btns">
-            <a href="#" class="btn">FaceBook</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn">LinkedIn</a>
+            <a href="https://www.facebook.com/zizo.etman.79" class="btn" target="_blank">FaceBook</a>
+            <a href="https://github.com/1Ziad-Etman1" class="btn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/ziad-etman-621b2a252" class="btn" target="_blank">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -300,7 +300,7 @@
             
             <div class="project-content">
               <div class="content">
-                <a href="https://github.com/1Ziad-Etman1/TOFEE-System" >
+                <a href="https://github.com/1Ziad-Etman1/TOFEE-System" target="_blank" >
                   TOFEE System
                 </a>
 
@@ -318,7 +318,7 @@
             
             <div class="project-content">
               <div class="content">
-                <a href="https://github.com/1Ziad-Etman1/LibraMind" >
+                <a href="https://github.com/1Ziad-Etman1/LibraMind" target="_blank" >
                   Libra Mind
                 </a>
 
@@ -327,7 +327,7 @@
             
             <div class="project-content">
               <div  class="content">
-                <a href="https://github.com/1Ziad-Etman1/HR_Link">
+                <a href="https://github.com/1Ziad-Etman1/HR_Link" target="_blank">
 
                   HR Link Website
                 </a>
@@ -345,7 +345,7 @@
           <div class="projects-box">
             <div class="project-content">
               <div class="content">
-                <a href="https://github.com/1Ziad-Etman1/CODSOFT">
+                <a href="https://github.com/1Ziad-Etman1/CODSOFT" target="_blank">
                   CodSoft Projects
                 </a>
 
@@ -354,7 +354,7 @@
             
             <div class="project-content">
               <div class="content">
-                <a href="https://github.com/1Ziad-Etman1/Data_Structures" >
+                <a href="https://github.com/1Ziad-Etman1/Data_Structures" target="_blank" >
                   Data Structures
                 </a>
 
@@ -363,7 +363,7 @@
             
             <div class="project-content">
               <div class="content">
-                <a href="https://github.com/1Ziad-Etman1/Sort_Algorithms" >
+                <a href="https://github.com/1Ziad-Etman1/Sort_Algorithms" target="_blank" >
                   Sort Algorithms
                 </a>
 
@@ -381,7 +381,7 @@
             
             <div class="project-content">
               <div  class="content">
-                <a href="https://github.com/1Ziad-Etman1/XO_Game">
+                <a href="https://github.com/1Ziad-Etman1/XO_Game" target="_blank">
                   XO game
                 </a>
               </div>
@@ -399,17 +399,17 @@
     <section class="contact hide" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form onsubmit="sendEmail(); reset(); return false;">
         <!-- First Input Box S -->
         <div class="input-box">
           <!-- Name -->
           <div class="input-field">
-            <input type="text" placeholder="Full Name" required>
+            <input type="text" id="Name" placeholder="Full Name" required>
             <span class="focus"></span>
           </div>
           <!-- Email -->
           <div class="input-field">
-            <input type="text" placeholder="Email Address" required>
+            <input type="email" id="Email" placeholder="Email Address" required>
             <span class="focus"></span>
           </div>
         </div>
@@ -417,14 +417,14 @@
 
         <!-- Second Input Box S -->
         <div class="input-box">
-          <!-- Name -->
+          <!-- Mobile -->
           <div class="input-field">
-            <input type="text" placeholder="Mobile Number" required>
+            <input type="number" id="Phone Number" placeholder="Mobile Number" required>
             <span class="focus"></span>
           </div>
-          <!-- Email -->
+          <!-- Email Subject -->
           <div class="input-field">
-            <input type="text" placeholder="Email Subject" required>
+            <input type="text" id="Email Subject" placeholder="Email Subject" required>
             <span class="focus"></span>
           </div>
         </div>
@@ -432,14 +432,14 @@
 
         <!-- Text Atra Field S-->
         <div class="textarea-field">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <textarea id="Content" cols="30" rows="10" placeholder="Your Message"></textarea>
           <span class="focus"></span>
         </div>
         <!-- Text Atra Field E-->
 
         <!-- Submit Button  -->
         <div class="btn-box btns">
-          <button type="submit" class="btn">Submit</button>
+          <button type="submit" id="sbmt" class="btn">Submit</button>
         </div>
       </form>
     </section>
@@ -456,6 +456,7 @@
 
     </footer>
     <!-- Footer  E-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/script.js"></script>
   </body>
