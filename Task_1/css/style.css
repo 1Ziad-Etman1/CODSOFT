@@ -159,6 +159,13 @@ span {
   display: none;
 }
 
+#dark-mode {
+  font-size: 2.2rem;
+  cursor: pointer;
+  margin-right: -2.5rem;
+  margin-left: 2rem;
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,19 +199,6 @@ span {
   background-position: -33rem 0;
   -webkit-animation: homeBgText 6s linear infinite;
           animation: homeBgText 6s linear infinite;
-}
-.home .home-content .text-animate h3::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  border-right: 2px solid var(--mainColor);
-  z-index: -1;
-  background-position: 0 0;
-  -webkit-animation: homeCursorText 6s linear infinite;
-          animation: homeCursorText 6s linear infinite;
 }
 .home .home-content p {
   font-size: 16px;
@@ -344,6 +338,7 @@ span {
           flex-direction: column;
   min-height: auto;
   padding-bottom: 5rem;
+  height: 100vh;
 }
 .education .education-row {
   display: -webkit-box;
@@ -491,27 +486,51 @@ span {
   width: 100%;
 }
 .skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-  width: 85%;
+  width: 70%;
 }
 .skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-  width: 65%;
+  width: 95%;
 }
 .skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-  width: 63%;
+  width: 90%;
 }
 .skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+  width: 90%;
+}
+.skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+  width: 75%;
+}
+.skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
+  width: 70%;
+}
+.skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
+  width: 70%;
+}
+.skills .skills-row .skills-column:nth-child(1) .skills-content .progress:nth-child(8) .bar span {
   width: 70%;
 }
 .skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-  width: 82%;
+  width: 85%;
 }
 .skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-  width: 67%;
+  width: 65%;
 }
 .skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-  width: 70%;
+  width: 63%;
 }
 .skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+  width: 70%;
+}
+.skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
+  width: 82%;
+}
+.skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
+  width: 67%;
+}
+.skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
+  width: 70%;
+}
+.skills .skills-row .skills-column:nth-child(2) .skills-content .progress:nth-child(8) .bar span {
   width: 70%;
 }
 
@@ -559,8 +578,16 @@ span {
   font-size: 2.5rem;
   text-align: center;
 }
-.projects .projects-row .projects-column .projects-box .project-content .content a:visited {
+.projects .projects-row .projects-column .projects-box .project-content .content h3 a {
+  font-size: 2.2rem;
   color: var(--textColor);
+}
+.projects .projects-row .projects-column .projects-box .project-content .content h3 a:visited {
+  color: var(--textColor);
+}
+.projects .projects-row .projects-column .projects-box .project-content .content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
 }
 .projects .projects-row .projects-column .projects-box .project-content .content::before {
   content: "";
@@ -580,7 +607,7 @@ span {
 .projects .projects-row .projects-column .projects-box .project-content::before {
   content: "";
   position: absolute;
-  top: 3.2rem;
+  top: 0;
   left: -1.1rem;
   width: 2rem;
   height: 2rem;

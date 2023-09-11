@@ -50,27 +50,39 @@ window.onscroll = () => {
   navbar.classList.remove('active')
 }
 
-//Contact us script
+// Dark light toggle
+let root = document.querySelector(':root')
 
-let btn = document.getElementById('sbmt')
-btn.addEventListener('click', (e) => {
-  e.preventDefault()
+let rootStyles = getComputedStyle(root)
 
-  // Email.send({
-  //   SecureToken: '7a53ec65-850e-4a26-9ae9-4387db86b9d8',
-  //   To: 'engziad90@gmail.com',
-  //   From: 'visitor1373@gmail.com',
-  //   Subject: document.getElementById('Email Subject').value,
-  //   Body: document.getElementById('Content').value,
-  // }).then((message) => alert(message))
+let bgColor = rootStyles.getPropertyValue('--bgColor')
+let secBgColor = rootStyles.getPropertyValue('--secBgColor')
+let textColor = rootStyles.getPropertyValue('--text')
+let mainColor = rootStyles.getPropertyValue('--mainColor')
 
-  Email.send({
-    Host: 'smtp.elasticemail.com',
-    Username: 'visitor1373@gmail.com',
-    Password: '3E2A6F12BA176BD2BEDAD6474DBF1621A202',
-    To: 'engziad90@gmail.com',
-    From: 'visitor1373@gmail.com',
-    Subject: 'This is the subject',
-    Body: 'And this is the body',
-  }).then((message) => alert(message))
+let darkModeBtn = document.querySelector('#dark-mode')
+
+//   --bgColor: #081b29;
+//   --secBgColor: #112e42;
+//   --textColor: #ededed;
+//   --mainColor: #00abf0;
+// --bgColor: #f1f1f1;
+// --secBgColor: #d7d7d7;
+// --textColor: #2f2f2f;
+// --mainColor: #0188be;
+
+darkModeBtn.addEventListener('click', () => {
+  if (darkModeBtn.classList.contains('bx-sun')) {
+    root.style.setProperty('--bgColor', '#dcdcdc')
+    root.style.setProperty('--secBgColor', '#cdcdcd')
+    root.style.setProperty('--textColor', '#2f2f2f')
+    root.style.setProperty('--mainColor', '#0188be')
+    darkModeBtn.classList = 'bx bxs-moon'
+  } else {
+    root.style.setProperty('--bgColor', '#081b29')
+    root.style.setProperty('--secBgColor', '#112e42')
+    root.style.setProperty('--textColor', '#ededed')
+    root.style.setProperty('--mainColor', '#00abf0')
+    darkModeBtn.classList = 'bx bx-sun'
+  }
 })

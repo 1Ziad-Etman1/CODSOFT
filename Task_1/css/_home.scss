@@ -28,18 +28,18 @@
         animation: homeBgText 6s linear infinite;
       }
 
-      h3::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        border-right: 2px solid var(--mainColor);
-        z-index: -1;
-        background-position: 0 0;
-        animation: homeCursorText 6s linear infinite;
-      }
+      // h3::before {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 0;
+      //   height: 100%;
+      //   border-right: 2px solid var(--mainColor);
+      //   z-index: -1;
+      //   background-position: 0 0;
+      //   animation: homeCursorText 6s linear infinite;
+      // }
     }
 
     p {

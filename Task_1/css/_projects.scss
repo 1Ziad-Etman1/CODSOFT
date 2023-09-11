@@ -29,8 +29,19 @@
             font-size: 2.5rem;
             text-align: center;
 
-            a:visited {
-              color: var(--textColor);
+            h3 {
+              a {
+                font-size: 2.2rem;
+                color: var(--textColor);
+              }
+              a:visited {
+                color: var(--textColor);
+              }
+            }
+
+            p {
+              font-size: 1.3rem;
+              margin-top: 1rem;
             }
           }
 
@@ -54,7 +65,7 @@
         .project-content::before {
           content: '';
           position: absolute;
-          top: 3.2rem;
+          top: 0;
           left: -1.1rem;
           width: 2rem;
           height: 2rem;
